@@ -1,4 +1,22 @@
-const Greeting = () => (
-  <h1>Greeting from here</h1>
-);
+import { useSelector } from 'react-redux';
+
+const Greeting = () => {
+  const {
+    greeting, isLoading, isError, errorMsg,
+  } = useSelector(
+    (store) => store.greeting,
+  );
+
+  console.log(greeting);
+
+  if (isLoading) {
+    return <h1>Loading Greeting</h1>;
+  }
+
+  if (isError) {
+    return <h1>{errorMsg}</h1>;
+  }
+
+  return <h1>{greeting.message}</h1>;
+};
 export default Greeting;

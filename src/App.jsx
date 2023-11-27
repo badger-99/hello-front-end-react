@@ -1,7 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Greeting from './components/Greeting';
+import { getGreeting } from './redux/slices/greetingSlice';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getGreeting());
+  }, []);
   return (
     <main>
       <Routes>
@@ -9,6 +16,6 @@ function App() {
       </Routes>
     </main>
   );
-}
+};
 
 export default App;
