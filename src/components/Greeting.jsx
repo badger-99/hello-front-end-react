@@ -7,8 +7,6 @@ const Greeting = () => {
     (store) => store.greeting,
   );
 
-  console.log(greeting);
-
   if (isLoading) {
     return <h1>Loading Greeting</h1>;
   }
