@@ -1,7 +1,9 @@
+import Greeting from './components/Greeting';
+
 function App() {
   return (
     <div>
-      <h1>Greetings go here</h1>
+      <Greeting />
     </div>
   );
 }
