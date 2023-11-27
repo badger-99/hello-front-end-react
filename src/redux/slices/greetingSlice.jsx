@@ -20,7 +20,7 @@ export const getGreeting = createAsyncThunk(
       const errorMsg = `${error.code}: ${error.message}`;
       return thunkAPI.rejectWithValue(errorMsg);
     }
-  }
+  },
 );
 
 const greetingSlice = createSlice({

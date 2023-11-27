@@ -3,8 +3,8 @@ import greetingSlice from './redux/slices/greetingSlice';
 
 const store = configureStore({
   reducer: {
-    greeting: greetingSlice
+    greeting: greetingSlice,
   },
 });
 
-export default store
+export default store;
