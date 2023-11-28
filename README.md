@@ -73,10 +73,11 @@ Open the terminal in the root directory of the project and run the following com
 
 
 ### Usage
-To start the development server, run the following command then navigate to `localhost:3000` in your browser.
+To start the development server, run the following command and the dev server should open automatically on in your default browser. If not, navigate to the indicated `localhost`
 
     npm start
 
+Additioinally, make user that the URL in greetingSlice is the same as the one the Rails App server is running from.
 
 ### Run tests
 There are no tests to run.
